@@ -1004,6 +1004,11 @@ Blockly.Msg.es_es.switch_language_to_spanish_es = {
     Blockly.Msg.LANG_COMPONENT_BLOCK_SLIDER_EVENTS_HELPURL = '/reference/components/userinterface.html#sliderevents';
     Blockly.Msg.LANG_COMPONENT_BLOCK_SLIDER_METHODS_HELPURL = '/reference/components/userinterface.html#slidermethods';
 
+    Blockly.Msg.LANG_COMPONENT_BLOCK_STARRATINGBAR_HELPURL = '/reference/components/userinterface.html#Starratingbar';
+    Blockly.Msg.LANG_COMPONENT_BLOCK_STARRATINGBAR_PROPERTIES_HELPURL = '/reference/components/userinterface.html#starratingbarproperties';
+    Blockly.Msg.LANG_COMPONENT_BLOCK_STARRATINGBAR_EVENTS_HELPURL = '/reference/components/userinterface.html#starratingbarevents';
+    Blockly.Msg.LANG_COMPONENT_BLOCK_STARRATINGBAR_METHODS_HELPURL = '/reference/components/userinterface.html#starratingbarmethods';
+
     Blockly.Msg.LANG_COMPONENT_BLOCK_TEXTBOX_HELPURL = '/reference/components/userinterface.html#TextBox';
     Blockly.Msg.LANG_COMPONENT_BLOCK_TEXTBOX_PROPERTIES_HELPURL = '/reference/components/userinterface.html#textboxproperties';
     Blockly.Msg.LANG_COMPONENT_BLOCK_TEXTBOX_EVENTS_HELPURL = '/reference/components/userinterface.html#textboxevents';

@@ -69,6 +69,8 @@ public class TranslationDesignerPallete {
       value = MESSAGES.passwordTextBoxComponentPallette();
     } else if (key.equals("Slider")) {
       value = MESSAGES.sliderComponentPallette();
+    } else if (key.equals("StarRatingBar")) {
+        value = MESSAGES.starRatingBarComponentPallette();
     } else if (key.equals("Spinner")) {
       value = MESSAGES.spinnerComponentPallette();
     } else if (key.equals("TextBox")) {
@@ -268,6 +270,8 @@ public class TranslationDesignerPallete {
       value = MESSAGES.SharingHelpStringComponentPallette();
     } else if (key.equals("Slider-helpString")) {
       value = MESSAGES.SliderHelpStringComponentPallette();
+    } else if (key.equals("StarRatingBar-helpString")) {
+        value = MESSAGES.StarRatingBarHelpStringComponentPallette();
     } else if (key.equals("Sound-helpString")) {
       value = MESSAGES.SoundHelpStringComponentPallette();
     } else if (key.equals("SoundRecorder-helpString")) {

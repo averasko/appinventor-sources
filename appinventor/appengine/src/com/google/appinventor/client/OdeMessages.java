@@ -2000,6 +2000,10 @@ public interface OdeMessages extends Messages {
   @DefaultMessage("Slider")
   @Description("")
   String sliderComponentPallette();
+
+  @DefaultMessage("StarRatingBar")
+  @Description("")
+  String starRatingBarComponentPallette();
   
   @DefaultMessage("Spinner")
   @Description("")
@@ -4943,6 +4947,10 @@ public interface OdeMessages extends Messages {
   @DefaultMessage("A Slider is a progress bar that adds a draggable thumb. You can touch the thumb and drag left or right to set the slider thumb position. As the Slider thumb is dragged, it will trigger the PositionChanged event, reporting the position of the Slider thumb. The reported position of the Slider thumb can be used to dynamically update another component attribute, such as the font size of a TextBox or the radius of a Ball.")
   @Description("")
   String SliderHelpStringComponentPallette();
+
+  @DefaultMessage("A StarRatingBar is a rating bar. You can tap on it to set some rating.")
+  @Description("")
+  String StarRatingBarHelpStringComponentPallette();
 
   @DefaultMessage("<p>A multimedia component that plays sound files and optionally vibrates for the number of milliseconds (thousandths of a second) specified in the Blocks Editor.  The name of the sound file to play can be specified either in the Designer or in the Blocks Editor.</p> <p>For supported sound file formats, see <a href=\"http://developer.android.com/guide/appendix/media-formats.html\" target=\"_blank\">Android Supported Media Formats</a>.</p><p>This <code>Sound</code> component is best for short sound files, such as sound effects, while the <code>Player</code> component is more efficient for longer sounds, such as songs.</p>")
   @Description("")

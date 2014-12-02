@@ -298,6 +298,12 @@ public interface Images extends Resources {
   ImageResource slider();
 
   /**
+   * Designer palette item: StarRatingBar
+   */
+  @Source("com/google/appinventor/images/starRatingBar.png")
+  ImageResource starRatingBar();
+
+  /**
    * Designer palette item: Notifier
    */
   @Source("com/google/appinventor/images/notifier.png")

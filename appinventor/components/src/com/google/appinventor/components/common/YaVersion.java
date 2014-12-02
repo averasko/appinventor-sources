@@ -285,8 +285,10 @@ public class YaVersion {
   // - WEB_COMPONENT_VERSION was incremented to 4.
   // For YOUNG_ANDROID_VERSION 106:
   // - LISTVIEW_COMPONENT_VERSION was incremented to 3.
+  // For YOUNG_ANDROID_VERSION 107:
+  // - STARRATINGBAR_COMPONENT_VERSION was incremented to 1.
 
-  public static final int YOUNG_ANDROID_VERSION = 106;
+  public static final int YOUNG_ANDROID_VERSION = 107;
 
   // ............................... Blocks Language Version Number ...............................
 
@@ -801,6 +803,10 @@ public class YaVersion {
   // For YANDEX_COMPONENT_VERSION 1:
   // - Initial version.
   public static final int YANDEX_COMPONENT_VERSION = 1;
+
+  // For STARRATINGBAR_COMPONENT_VERSION 1:
+  // - Initial version.
+  public static final int STARRATINGBAR_COMPONENT_VERSION = 1;
 
   // Rendezvous Server Location
 

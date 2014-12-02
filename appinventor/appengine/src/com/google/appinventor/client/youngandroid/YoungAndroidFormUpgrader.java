@@ -217,6 +217,9 @@ public final class YoungAndroidFormUpgrader {
       } else if (componentType.equals("Slider")) {
         srcCompVersion = upgradeSliderProperties(componentProperties, srcCompVersion);
 
+      } else if (componentType.equals("StarRatingBar")) {
+        srcCompVersion = upgradeStarRatingBarProperties(componentProperties, srcCompVersion);
+
       } else if (componentType.equals("TextToSpeech")) {
         srcCompVersion = upgradeTextToSpeechProperties(componentProperties, srcCompVersion);
 
@@ -481,6 +484,16 @@ public final class YoungAndroidFormUpgrader {
   }
   private static int upgradeSliderProperties(Map<String, JSONValue> componentProperties,
       int srcCompVersion) {
+    if (srcCompVersion < 1) {
+      // Initial version. Placeholder for future upgrades
+      srcCompVersion = 1;
+    }
+
+    return srcCompVersion;
+  }
+
+  private static int upgradeStarRatingBarProperties(Map<String, JSONValue> componentProperties,
+                                             int srcCompVersion) {
     if (srcCompVersion < 1) {
       // Initial version. Placeholder for future upgrades
       srcCompVersion = 1;
