@@ -82,7 +82,7 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
         if (DEBUG) {
             Log.d(LOG_TAG, "Rating value is set to: " + rating);
         }
-        PositionChanged(rating);
+        RatingChanged(rating);
     }
 
     @SimpleProperty(category = PropertyCategory.APPEARANCE,
@@ -102,15 +102,15 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
             Log.d(LOG_TAG, "onRatingChanged to: " + rating
                     + ", reporting to user as: " + rating);
         }
-        PositionChanged(rating);
+        RatingChanged(rating);
     }
 
     /**
      * Called whenever the rating got changed.
      */
     @SimpleEvent
-    public void PositionChanged(float rating) {
-        EventDispatcher.dispatchEvent(this, "PositionChanged", rating);
+    public void RatingChanged(float rating) {
+        EventDispatcher.dispatchEvent(this, "RatingChanged", rating);
     }
 
     /**

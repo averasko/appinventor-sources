@@ -304,6 +304,12 @@ public interface Images extends Resources {
   ImageResource starRatingBar();
 
   /**
+   * An image of the rating bar for the mock widget.
+   */
+  @Source("com/google/appinventor/images/starRatingBarFull.png")
+  ImageResource starRatingBarFull();
+
+  /**
    * Designer palette item: Notifier
    */
   @Source("com/google/appinventor/images/notifier.png")
