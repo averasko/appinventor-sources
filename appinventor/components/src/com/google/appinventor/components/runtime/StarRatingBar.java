@@ -82,6 +82,7 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
         if (DEBUG) {
             Log.d(LOG_TAG, "Rating value is set to: " + rating);
         }
+        PositionChanged(rating);
     }
 
     @SimpleProperty(category = PropertyCategory.APPEARANCE,
@@ -111,5 +112,30 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
     public void PositionChanged(float rating) {
         EventDispatcher.dispatchEvent(this, "PositionChanged", rating);
     }
+
+    /**
+     * Returns the component's vertical height, measured in pixels.
+     *
+     * @return height in pixels
+     */
+    @Override
+    public int Height() {
+        //NOTE(kashi01): overriding and removing the annotation, because we don't want to give user
+        //ability to change the slider height and don't want display this in our block editor
+        return getView().getHeight();
+    }
+
+    /**
+     * Specifies the component's vertical height, measured in pixels.
+     *
+     * @param height in pixels
+     */
+    @Override
+    public void Height(int height) {
+        //NOTE(kashi01): overriding and removing the annotation, because we don't want to give user
+        //ability to change the slider height and don't want display this in our block editor
+        container.setChildHeight(this, height);
+    }
+
 
 }
