@@ -28,7 +28,7 @@ import com.google.appinventor.components.common.YaVersion;
     category = ComponentCategory.USERINTERFACE)
 @SimpleObject
 public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnRatingBarChangeListener {
-    private final static String LOG_TAG = "RatingBar";
+    private final static String LOG_TAG = "StarRatingBar";
     private static final boolean DEBUG = false;
 
     private final RatingBar ratingBar;
@@ -50,20 +50,22 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
         container.$add(this);
 
         // Initial property values
-        numStars = 5;
-        rating = (float)numStars / 2;
+        NumStars(Component.STARRATINGBAR_NUM_STARS);
+        Rating(Component.STARRATINGBAR_RATING);
 
         ratingBar.setOnRatingBarChangeListener(this);
     }
 
     @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_INTEGER,
-            defaultValue = 5 + "")
+            defaultValue = Component.STARRATINGBAR_NUM_STARS + "")
     @SimpleProperty(description = "?description?",
             userVisible = true)
     public void NumStars(int numStars) {
-        this.numStars = Math.max(0, numStars);
+        ratingBar.setNumStars(numStars);
+        this.numStars = ratingBar.getNumStars();
+
         if (DEBUG) {
-            Log.d(LOG_TAG, "NumStars value is set to: " + numStars);
+            Log.d(LOG_TAG, "NumStars value is set to: " + this.numStars);
         }
     }
 
@@ -74,13 +76,15 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
     }
 
     @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_FLOAT,
-            defaultValue = 2.5f + "")
+            defaultValue = Component.STARRATINGBAR_RATING + "")
     @SimpleProperty(description = "?description?",
             userVisible = true)
     public void Rating(float rating) {
-        this.rating = rating;
+        ratingBar.setRating(rating);
+        this.rating = ratingBar.getRating();
+
         if (DEBUG) {
-            Log.d(LOG_TAG, "Rating value is set to: " + rating);
+            Log.d(LOG_TAG, "Rating value is set to: " + this.rating);
         }
         RatingChanged(rating);
     }

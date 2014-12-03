@@ -137,4 +137,8 @@ public interface Component {
   public static float SLIDER_MAX_VALUE = 50;
   public static float SLIDER_THUMB_VALUE = (SLIDER_MIN_VALUE + SLIDER_MAX_VALUE) / 2.0f;
 
+  //StarRatingBar defaults
+  public static int STARRATINGBAR_NUM_STARS = 5;
+  public static float STARRATINGBAR_RATING = STARRATINGBAR_NUM_STARS / 2.0f;
+
 }
