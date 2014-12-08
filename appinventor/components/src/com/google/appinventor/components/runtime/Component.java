@@ -139,6 +139,6 @@ public interface Component {
 
   //StarRatingBar defaults
   public static int STARRATINGBAR_NUM_STARS = 5;
-  public static float STARRATINGBAR_RATING = STARRATINGBAR_NUM_STARS / 2.0f;
+  public static int STARRATINGBAR_RATING = STARRATINGBAR_NUM_STARS / 2;
 
 }

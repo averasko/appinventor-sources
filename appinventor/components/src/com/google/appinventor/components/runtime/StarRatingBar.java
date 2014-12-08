@@ -35,7 +35,7 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
 
     // the number of stars and the current rating value
     private int numStars;
-    private float rating;
+    private int rating; //we do not support fractional values, in contrast to the AndroidSDK
 
     /**
      * Creates a new RatingBar component.
@@ -75,24 +75,25 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
         return this.numStars;
     }
 
-    @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_FLOAT,
+    @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_INTEGER,
             defaultValue = Component.STARRATINGBAR_RATING + "")
     @SimpleProperty(description = "?description?",
             userVisible = true)
-    public void Rating(float rating) {
-        ratingBar.setRating(rating);
-        this.rating = ratingBar.getRating();
+    public void Rating(int rating) {
+        ratingBar.setRating((float)rating);
+        this.rating = (int)ratingBar.getRating(); //we allow AndroidSDK to validate the value
 
         if (DEBUG) {
             Log.d(LOG_TAG, "Rating value is set to: " + this.rating);
         }
-        RatingChanged(rating);
+
+        RatingChanged(this.rating);
     }
 
     @SimpleProperty(category = PropertyCategory.APPEARANCE,
             description = "?description?", userVisible = true)
-    public float Rating() {
-        return rating;
+    public int Rating() {
+        return this.rating;
     }
 
     @Override
@@ -106,14 +107,14 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
             Log.d(LOG_TAG, "onRatingChanged to: " + rating
                     + ", reporting to user as: " + rating);
         }
-        RatingChanged(rating);
+        RatingChanged((int)rating);
     }
 
     /**
      * Called whenever the rating got changed.
      */
     @SimpleEvent
-    public void RatingChanged(float rating) {
+    public void RatingChanged(int rating) {
         EventDispatcher.dispatchEvent(this, "RatingChanged", rating);
     }
 
