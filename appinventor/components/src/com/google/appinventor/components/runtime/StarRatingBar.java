@@ -56,7 +56,7 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
         ratingBar.setOnRatingBarChangeListener(this);
     }
 
-    @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_INTEGER,
+    @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_NON_NEGATIVE_INTEGER,
             defaultValue = Component.STARRATINGBAR_NUM_STARS + "")
     @SimpleProperty(description = "?description?",
             userVisible = true)
@@ -75,7 +75,7 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
         return this.numStars;
     }
 
-    @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_INTEGER,
+    @DesignerProperty(editorType = PropertyTypeConstants.PROPERTY_TYPE_NON_NEGATIVE_INTEGER,
             defaultValue = Component.STARRATINGBAR_RATING + "")
     @SimpleProperty(description = "?description?",
             userVisible = true)
