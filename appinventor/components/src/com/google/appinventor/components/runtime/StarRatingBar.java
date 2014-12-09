@@ -52,6 +52,7 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
         // Initial property values
         NumStars(Component.STARRATINGBAR_NUM_STARS);
         Rating(Component.STARRATINGBAR_RATING);
+        ratingBar.setStepSize(1.0f); //we do not want fractional ratings
 
         ratingBar.setOnRatingBarChangeListener(this);
     }
