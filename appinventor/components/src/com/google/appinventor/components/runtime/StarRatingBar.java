@@ -33,8 +33,7 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
 
     private final RatingBar ratingBar;
 
-    // the number of stars and the current rating value
-    private int numStars;
+    private int numStars; // the number of stars and the current rating value
     private int rating; //we do not support fractional values, in contrast to the AndroidSDK
 
     /**
@@ -44,7 +43,7 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
      */
     public StarRatingBar(ComponentContainer container) {
         super(container);
-        ratingBar = new RatingBar(container.$context());
+        ratingBar = new RatingBar(container.$context(), null, android.R.attr.ratingBarStyle);
 
         // Adds the component to its designated container
         container.$add(this);
@@ -126,8 +125,8 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
      */
     @Override
     public int Height() {
-        //NOTE(kashi01): overriding and removing the annotation, because we don't want to give user
-        //ability to change the slider height and don't want display this in our block editor
+        //overriding and removing the annotation as we don't want to give the user
+        //ability to change the ratingbar's height and want to hide it in the block editor
         return getView().getHeight();
     }
 
@@ -138,8 +137,8 @@ public class StarRatingBar extends AndroidViewComponent implements RatingBar.OnR
      */
     @Override
     public void Height(int height) {
-        //NOTE(kashi01): overriding and removing the annotation, because we don't want to give user
-        //ability to change the slider height and don't want display this in our block editor
+        //overriding and removing the annotation as we don't want to give the user
+        //ability to change the ratingbar's height and want to hide it in the block editor
         container.setChildHeight(this, height);
     }
 
